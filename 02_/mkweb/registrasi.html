@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Online Shop - Registrasi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #222;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    #header {
+      width: 100%;
+      background: #9f97db;
+      height: 80px;
+      text-align: center;
+      line-height: 80px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    #menu {
+      width: 100%;
+      background: #7870b8;
+      text-align: center;
+      padding: 10px 0;
+    }
+    #menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    #menu a:hover {
+      text-decoration: underline;
+    }
+    #main {
+      flex: 1;
+      display: flex;
+      width: 100%;
+    }
+    #l-side, #r-side {
+      background: #36315c;
+      width: 20%;
+      min-height: calc(100vh - 200px);
+      padding: 20px;
+      text-align: center;
+    }
+    #content {
+      background: #33323a;
+      width: 60%;
+      padding: 30px;
+      text-align: left;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    table {
+      margin: 0 auto;
+      color: white;
+    }
+    input[type="text"], input[type="date"], textarea, select {
+      width: 100%;
+      padding: 5px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 4px;
+    }
+    input[type="submit"], input[type="reset"] {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      background-color: #9f97db;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #7870b8;
+    }
+    #footer {
+      width: 100%;
+      background: #504f53;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="header"onclick="window.location.href='admin.html'">Registrasi</div>
+
+  <div id="menu">
+    <a href="index.html">Beranda</a>
+    <a href="produk.html">Produk</a>
+    <a href="member.html">Member</a>
+    <a href="registrasi.html">Registrasi</a>
+  </div>
+
+  <div id="main">
+    <div id="l-side">Populer</div>
+
+    <div id="content">
+      <h3>Form Registrasi</h3>
+      <form>
+        <table>
+          <tr>
+            <td>Nama Lengkap</td>
+            <td>:</td>
+            <td><input type="text" name="nama"></td>
+          </tr>
+          <tr>
+            <td>TTL</td>
+            <td>:</td>
+            <td>
+              <input type="text" name="tempat" placeholder="Tempat">
+              <input type="date" name="tanggal">
+            </td>
+          </tr>
+          <tr>
+            <td>Alamat</td>
+            <td>:</td>
+            <td><textarea name="alamat" rows="3"></textarea></td>
+          </tr>
+          <tr>
+            <td>JK</td>
+            <td>:</td>
+            <td>
+              <input type="radio" name="jk" value="L"> Laki-laki
+              <input type="radio" name="jk" value="P"> Perempuan
+            </td>
+          </tr>
+          <tr>
+            <td>Agama</td>
+            <td>:</td>
+            <td>
+              <select name="agama">
+                <option value="islam">Islam</option>
+                <option value="kristen">Kristen</option>
+                <option value="katolik">Katolik</option>
+                <option value="hindu">Hindu</option>
+                <option value="budha">Budha</option>
+                <option value="konghuchu">Konghuchu</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Hobi</td>
+            <td>:</td>
+            <td>
+              <input type="checkbox" name="hobi" value="mancing"> Mancing
+              <input type="checkbox" name="hobi" value="masak"> Masak
+              <input type="checkbox" name="hobi" value="baca"> Membaca
+              <input type="checkbox" name="hobi" value="manah"> Memanah
+              <input type="checkbox" name="hobi" value="ngoding"> Ngoding
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <input type="submit" value="Simpan">
+              <input type="reset" value="Reset">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <div id="r-side">Advertise</div>
+  </div>
+
+  <div id="footer">© 2025 Online Shop</div>
+</body>
+</html>
