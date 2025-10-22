@@ -46,15 +46,21 @@
     <section class="produk-section">
       <div class="produk-list">
         <div class="produk-item">
-          <img src="assets/images/Baju-1.jpg" alt="Baju-1" />
+          <img src="assets/images/Baju-1.jpg" alt="Baju-1" onclick="detailIMG()"/>
           <p class="nama-produk">Dan Heng Cosplay Costume</p>
           <p class="harga">Rp 1.150.000</p>
         </div>
+
+        <div class="detailGambar">
+          <img src="assets/images/Baju-1.jpg" onclick="sembunyikan()">
+        </div>
+
         <div class="produk-item">
           <img src="assets/images/Baju-2.jpg" alt="Baju-2" />
           <p class="nama-produk">Saber Cosplay Costume</p>
           <p class="harga">Rp 1.350.000</p>
         </div>
+        
         <div class="produk-item">
           <img src="assets/images/Baju-3.jpg" alt="Baju-3" />
           <p class="nama-produk">Blade Cosplay Costume</p>
@@ -121,5 +127,21 @@
       </div>
     </div>
   </footer>
+
 </body>
 </html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+  .detailGambar {display:none;}
+</style>
+
+<script>
+  function detailIMG(){
+    $(".detailGambar").show();
+  }
+  
+  function detailIMG(){
+    $(".detailGambar").hide();
+  }
+</script>
