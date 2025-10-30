@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar jQuery</title>
+    <!-- Memuat jQuery dari CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // Menjalankan kode ini ketika dokumen (halaman) selesai dimuat
+        $(document).ready(function(){
+            // Memilih elemen dengan id="teks" dan mengganti isinya
+            $("#teks").text("Halo Dunia dengan jQuery!");
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Teks awal ini akan langsung diganti oleh jQuery saat halaman dimuat -->
+    <p id="teks">Belajar jQuery itu asik!</p>
+
+</body>
+</html>

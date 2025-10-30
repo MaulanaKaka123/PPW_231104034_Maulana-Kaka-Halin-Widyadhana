@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sembunyikan & Tampilkan Kotak</title>
+    <style>
+        /* CSS minimal untuk kotak biru 
+          dan transisi fade
+        */
+        #kotakBiru {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            
+            /* Transisi untuk efek fade */
+            transition: opacity 0.5s ease-in-out;
+            
+            /* Atur opacity awal (terlihat) */
+            opacity: 1;
+            
+            /* Beri sedikit jarak dari tombol */
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tombol-tombol (tanpa style) -->
+    <div>
+        <button id="btnSembunyi">Sembunyikan</button>
+        <button id="btnTampil">Tampilkan</button>
+    </div>
+
+    <!-- Kotak Biru (tanpa style) -->
+    <div id="kotakBiru"></div>
+
+    <script>
+        // 1. Dapatkan referensi ke setiap elemen
+        const btnSembunyi = document.getElementById('btnSembunyi');
+        const btnTampil = document.getElementById('btnTampil');
+        const kotakBiru = document.getElementById('kotakBiru');
+
+        // 2. Tambahkan event listener untuk tombol "Sembunyikan"
+        btnSembunyi.addEventListener('click', () => {
+            // Membuat kotak fade out dengan mengubah opacity ke 0
+            kotakBiru.style.opacity = '0';
+        });
+
+        // 3. Tambahkan event listener untuk tombol "Tampilkan"
+        btnTampil.addEventListener('click', () => {
+            // Membuat kotak fade in dengan mengubah opacity ke 1
+            kotakBiru.style.opacity = '1';
+        });
+    </script>
+
+</body>
+</html>

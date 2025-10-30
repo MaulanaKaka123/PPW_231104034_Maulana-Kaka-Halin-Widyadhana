@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tombol Interaktif</title>
+    <style>
+        /* CSS Sederhana untuk tata letak yang lebih baik */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 8px 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            border-radius: 4px; /* Sedikit membulatkan sudut seperti di gambar */
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tombol yang akan diklik -->
+    <button id="tombolSaya">Klik Aku</button>
+
+    <!-- Paragraf yang akan berubah -->
+    <p id="paragrafSaya">Ini adalah paragraf awal.</p>
+
+    <script>
+        // Ambil elemen tombol berdasarkan ID-nya
+        const tombol = document.getElementById('tombolSaya');
+        
+        // Ambil elemen paragraf berdasarkan ID-nya
+        const paragraf = document.getElementById('paragrafSaya');
+
+        // Tambahkan 'event listener' untuk mendeteksi klik pada tombol
+        tombol.addEventListener('click', function() {
+            // Ubah teks di dalam paragraf
+            paragraf.textContent = 'Tombol sudah diklik!';
+            
+            // Ubah warna teks paragraf menjadi merah
+            paragraf.style.color = 'red';
+        });
+    </script>
+
+</body>
+</html>

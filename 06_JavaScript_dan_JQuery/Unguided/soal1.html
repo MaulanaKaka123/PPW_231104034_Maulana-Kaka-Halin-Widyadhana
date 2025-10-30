@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Pembelian Barang</title>
+</head>
+<body>
+
+    <!-- Kontainer utama -->
+    <div>
+
+        <!-- Judul -->
+        <h1>
+            Pembelian Barang
+        </h1>
+
+        <!-- Daftar Barang -->
+        <ul>
+            <li>Susu UHT &mdash; Rp 42.000 &times; 10</li>
+            <li>Roti Tawar &mdash; Rp 30.000 &times; 3</li>
+            <li>Mie Instan &mdash; Rp 20.000 &times; 5</li>
+            <li>Sosis &mdash; Rp 51.000 &times; 7</li>
+        </ul>
+
+        <!-- Tombol Hitung -->
+        <button id="calculateButton">
+            Hitung Total Harga
+        </button>
+
+        <!-- Hasil Perhitungan -->
+        <div id="totalResultContainer">
+            <!-- Hasil akan ditampilkan di sini oleh JavaScript -->
+        </div>
+
+    </div>
+
+    <script>
+        // Menunggu sampai seluruh konten HTML selesai dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Menyeleksi tombol dan kontainer hasil
+            const calculateButton = document.getElementById('calculateButton');
+            const resultContainer = document.getElementById('totalResultContainer');
+
+            // Data barang-barang
+            const items = [
+                { name: "Susu UHT", price: 42000, quantity: 10 },
+                { name: "Roti Tawar", price: 30000, quantity: 3 },
+                { name: "Mie Instan", price: 20000, quantity: 5 },
+                { name: "Sosis", price: 51000, quantity: 7 }
+            ];
+
+            // Fungsi untuk menghitung total
+            function calculateTotal() {
+                // Menghitung total harga
+                let total = items.reduce((sum, item) => {
+                    return sum + (item.price * item.quantity);
+                }, 0);
+
+                // Format angka menjadi mata uang Rupiah (Rp 967.000)
+                const formatter = new Intl.NumberFormat('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR',
+                    minimumFractionDigits: 0, // Tidak ada angka desimal
+                    maximumFractionDigits: 0  // Tidak ada angka desimal
+                });
+
+                const formattedTotal = formatter.format(total).replace(/\s/g, ''); // Menghapus spasi jika ada
+
+                // Menampilkan hasil
+                // Menggunakan format teks tebal (<b>) agar sesuai gambar
+                resultContainer.innerHTML = `Total harga pembelian adalah: <b>${formattedTotal}</b>`;
+            }
+
+            // Menambahkan event listener ke tombol
+            calculateButton.addEventListener('click', calculateTotal);
+        });
+    </script>
+
+</body>
+</html>
